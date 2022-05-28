@@ -1,4 +1,6 @@
+document.addEventListener('DOMContentLoaded', function () {
 
+    // local data
 let data = [
     {
         id: 1,
@@ -37,52 +39,46 @@ let data = [
     }
 ];
 
+    
+    let personImg = document.querySelector('img');
 
-let personImg = document.querySelector('img');
+    let personName = document.querySelector('#author');
 
-let personName = document.querySelector('#author');
+    let personJob = document.querySelector('#job');
 
-let personJob = document.querySelector('#job');
+    let personInfo = document.querySelector('#info');
 
-let personInfo = document.querySelector('#info');
+    let prevBtn = document.querySelector('#left-arrow');
 
-let prevBtn = document.querySelector('#left-arrow');
+    let nextBtn = document.querySelector('#right-arrow');
 
-let nextBtn = document.querySelector('#right-arrow');
-
-
-let currentItem = 0;
-
-
-window.addEventListener('DOMContentLoaded', function () {
-   showCurrentPerson(currentItem);
-});
-
-
-
-// show current person
-function showCurrentPerson(person) {
-    const item = data[person];
-    personImg.src = item.img;
-    personName.innerHTML = item.name;
-    personJob.innerHTML = item.job;
-    personInfo.innerHTML = item.info;
-}
-
-// next btn
-nextBtn.addEventListener('click', function () {
-    currentItem++;
-    if (currentItem > data.length) {
-        currentItem = 0;
+    let currentItem = 0;
+    // show current person
+    function showCurrentPerson(person) {
+        const item = data[person];
+        personImg.src = item.img;
+        personName.innerHTML = item.name;
+        personJob.innerHTML = item.job;
+        personInfo.innerHTML = item.info;
     }
-    showCurrentPerson(currentItem);
+
+    // next btn
+    nextBtn.addEventListener('click', function () {
+        currentItem++;
+        if (currentItem > data.length) {
+            currentItem = 0;
+        }
+        showCurrentPerson(currentItem);
+    });
+
+    // previous btn
+    prevBtn.addEventListener('click', function () {
+        currentItem--;
+        if(currentItem < 0) {
+            currentItem = 4;
+        }
+        showCurrentPerson(currentItem);
+    });
 });
 
-// previous btn
-prevBtn.addEventListener('click', function () {
-    currentItem--;
-    if(currentItem < 0) {
-        currentItem = data.length - 1;
-    }
-    showCurrentPerson(currentItem);
-});
+
