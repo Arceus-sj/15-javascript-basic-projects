@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+@media only screen and (min-width: 800px) {
+    nav {
+        background-color: #ffffff;
+        box-shadow: 5px 2px 10px #dee2e6;
+    }
+    
+    .nav-header {
+        display: inline-block;
+    }
+
+    
+    
+    .nav-center {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-header img{
+        width: 100%;
+        max-width: 90px;
+        height: 60px;
+        margin: 10px 10px 0px 10px;
+        /* box-shadow: 5px 2px 10px #dee2e6; */
+    }
+    
+    .nav-header::after {
+        content: '#Code';
+        font-size: 2rem;
+        color: #cbb2fe;
+        margin-left: 10px;
+        margin-top: 0px;
+        text-shadow: 1px 2px 3px #dee2e6;
+    }
+    .nav-content {
+        margin-right: 50px;
+    }
+    
+    .nav-content li {
+        font-weight: 600;
+        font-size: 1.5rem;
+        letter-spacing: 3px;
+        margin: auto 8px;
+        padding: 3px;
+        list-style: none;
+        display: inline-block;
+        text-shadow: 2px 1px 5px #f8f9fa;
+        cursor: pointer;
+        transition-property: color;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in-out;
+    }
+
+    ul li:hover {
+        color: #cbb2fe;
+    }
+
+    .nav-icons {
+        margin-right: 10px;
+    }
+    .nav-icons img {
+        margin: auto 1px;
+        padding: 2px;
+        transition-property: width, height;
+        transition-duration: 0.5s, 0.5s;
+    }
+
+    .nav-icons img:hover {
+        width: 25px;
+        height: 25px;
+    }
+
+    .nav-logo {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    nav {
+        background-color: #ffffff;
+        box-shadow: 5px 2px 10px #dee2e6;
+    }
+    .nav-header {
+        display: inline-block;
+    }
+    
+    .align-header-section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-header img{
+        width: 100%;
+        max-width: 100px;
+        height: 100px;
+        margin: 5px;
+    }
+
+    .nav-icons {
+        display: none;
+    }
+
+    .nav-logo {
+        margin: 10px;
+        padding: 3px;
+    }
+
+    .nav-logo button {
+        color: #a784ee;
+        font-size: 2rem;
+        font-weight: 700;
+        border: none;
+        background-color: #ffffff;
+        transition-property: transform, color;
+        transition-duration: 0.7s, 1s;
+        cursor: pointer;
+    }
+
+    
+
+    .nav-logo button:hover {
+        transform: rotate(90deg);
+        color: #000000;
+    }
+    
+    .nav-content {
+        height: 0;
+        overflow: hidden;
+        transition-property: height;
+        transition-duration: 0.5s;
+        transition-timing-function: linear;
+    }
+
+    .nav-content li {
+        position: relative;
+        font-size: 1.3rem;
+        font-weight: 600;
+        padding: 10px 15px;
+        transition-property: background-color, padding-left;
+        transition-duration: 0.4s;
+        transition-timing-function: ease-in-out;
+        list-style: none;
+        cursor: pointer;
+    }
+
+    .nav-content li:hover{
+        padding-left: 25px;
+        background-color: #cbb2fe;
+    }
+
+   
+   
+
+    .nav-content.show-link {
+        height: 11rem;
+        transition-property: height;
+        transition-duration: 0.5s;
+        transition-timing-function: linear;
+    }
+
+}
