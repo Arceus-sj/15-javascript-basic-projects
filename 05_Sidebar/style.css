@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    background-color: #f8f9fa;
+}
+
+
+
+/* Toggle button style */
+
+.toggle-btn {
+    margin-top: 10px;
+    margin-right: 20px;
+    padding: 10px;
+    float: right;
+    transition-property: animation, color;
+    transition-duration: 2s, 1s;
+    transition-timing-function: linear;
+}
+
+.toggle-btn button{
+    color: #023e8a;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    background-color: #f8f9fa;
+    animation: expandAnimation 1s infinite linear alternate-reverse;
+}
+
+.toggle-btn button:hover {
+    color: #0077b6;
+}
+
+@keyframes expandAnimation {
+    0% {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    100% {
+        font-size: 3rem;
+        font-weight: 900;
+    }
+}
+
+
+/* sidebar style */
+
+aside {
+    transition-property: width;
+    transition-duration: 0.5s;
+}
+
+.sidebar-container {
+    display: flex;
+    background-color: #fff;
+    width: 400px;
+    height: 100vh;
+    box-shadow: 2px 2px 5px #e1e5f2;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    transition-property: width;
+    transition-duration: 0.5s;
+  
+
+}
+
+.show {
+    width: 0%;
+    overflow: hidden;
+    transition-property: width;
+    transition-duration: 0.5s;
+}
+
+.sidebar-header {
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.sidebar-header i {
+    font-size: 4rem;
+}
+
+.close-btn {
+}
+
+.close-btn button {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #dd1c1a;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.close-btn button:hover {
+    transform: rotate(360deg);
+    transform-origin: center;
+}
+
+.sidebar-content li {
+    padding: 15px 20px;
+    font-size: 1.6rem;
+    font-weight: 900;
+    cursor: pointer;
+    list-style: none;
+    transition-property: background-color, padding-left;
+    transition-duration: 1s, 0.5s;
+    transition-timing-function: linear, ease-in-out;
+}
+
+.sidebar-content li:hover {
+    background-color: #1e88e5;
+    padding-left: 30px;
+}
+
+.sidebar-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 5px;
+}
+
+.sidebar-footer img {
+    margin-right: 5px;
+    padding: 15px;
+    cursor: pointer;
+    transition-property: width, height;
+    transition-duration: 1.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.sidebar-footer img:hover {
+    width: 35px;
+    height: 35px;
+}
