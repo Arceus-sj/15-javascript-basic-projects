@@ -69,7 +69,7 @@ aside {
 
 }
 
-.show {
+.hide {
     width: 0%;
     overflow: hidden;
     transition-property: width;
@@ -89,8 +89,6 @@ aside {
     font-size: 4rem;
 }
 
-.close-btn {
-}
 
 .close-btn button {
     font-size: 2rem;
