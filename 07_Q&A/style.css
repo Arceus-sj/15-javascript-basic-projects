@@ -65,7 +65,7 @@ article {
     /* border: 1px solid #fff; */
 }
 
-article .question-btn {
+article button {
     color: #6fffe9;
     border: none;
     background-color: transparent;
@@ -75,16 +75,16 @@ article .question-btn {
    
 }
 
-article .question-btn i {
+article button i {
     font-size: 1.6rem;
     
 }
 
-article .question-btn:hover{
+article button:hover{
     transform: rotate(90deg);
 }
 
-article .close-btn {
+/* article .close-btn {
     color: #6fffe9;
     border: none;
     background-color: transparent;
@@ -99,7 +99,7 @@ article .close-btn i {
 
 article .close-btn:hover{
     transform: rotate(90deg);
-}
+} */
 
 .question-text::before {
     content: '';
@@ -142,7 +142,7 @@ article .close-btn:hover{
     display: inline;
 }
 
-.show-text .plus-icon {
+.show-text .plus-btn {
     display: none;
 }
 
