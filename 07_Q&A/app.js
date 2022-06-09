@@ -1,24 +1,18 @@
-// for(let i = 0; i < 3; i++) {
-//     let showTextBtn = document.querySelectorAll('.question-btn')[i];
-//     let showArticle = document.querySelectorAll('article')[i];
-//     let closeBtn = document.querySelectorAll('.close-btn')[i];
-    
-//     showTextBtn.addEventListener('click', function () {
-//         showArticle.classList.add('show-text');
-//     });
+const questions = document.querySelectorAll('.question');
 
-//     closeBtn.addEventListener('click', function () {
-//         showArticle.classList.remove('show-text');
-//     })
-// }
+questions.forEach( function (question) {
+    // console.log(question);
+    const btn = question.querySelector('.question-btn');
+    // console.log(btn);
 
-const btns = document.querySelectorAll('.question-btn');
 
-const showArticle = document.querySelectorAll('article');
 
-btns.forEach(function (btn) {
-    btn.addEventListener('click', function (event) {
-        console.log(event.currentTarget);
-        
+    btn.addEventListener('click', function () {    
+        questions.forEach(function (article) {
+            if (article !== question) {
+                article.classList.remove('show-text');
+            }
+        });
+        question.classList.toggle('show-text');
     });
 });
