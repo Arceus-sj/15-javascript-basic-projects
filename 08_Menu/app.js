@@ -44,10 +44,10 @@ const menu = [
     },
     {
         id: 7,
-        title: "Grilled Fire Steak",
-        price: 20.99,
+        title: "Fire Steak",
+        price: 39.99,
         img: "./images/item_7.jpg",
-        desc: "This boneless steak is cut from the centre of the Rib Steak and is considered one of the five most tender meat cuts. It has a reputation for being the most marbles and delivers intense meat flavour and tenderness. Fast cooking and convenient, grilling steaks are tender by nature and always delicious.",
+        desc: "skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.",
     },
     {
         id: 8,
@@ -63,18 +63,65 @@ const menu = [
         img: "./images/item_9.jpg",
         desc: "Japanese noodle dish. It consists of Chinese-style wheat noodles served in a meat-based broth, often flavored with soy sauce or miso, and uses toppings such as sliced pork, nori, menma, and scallions",
     },
-    // {
-    //     id:,
-    //     title: "",
-    //     price:,
-    //     img: "./images/item_3.jpg",
-    //     desc: "",
-    // },
-    // {
-    //     id:,
-    //     title: "",
-    //     price:,
-    //     img: "./images/item_3.jpg",
-    //     desc: "",
-    // },
+    {
+        id: 10,
+        title: "Indian Samosa",
+        price: 4.99,
+        img: "./images/item_10.jpg",
+        desc: "fried or baked pastry with a savory filling, including ingredients such as spiced potatoes, onions, and peas.",
+    },
+    {
+        id: 11,
+        title: "Sushi",
+        price: 20.99,
+        img: "./images/item_11.jpg",
+        desc: " Japanese dish of prepared vinegared rice, usually with some sugar and salt, accompanied by a variety of ingredients, such as seafood, often raw, and vegetables. ",
+    },
+    {
+        id: 12,
+        title: "Madrid-style Macaroni",
+        price: 15.99,
+        img: "./images/item_12.jpg",
+        desc: "traditional macaroni, with its chorizo and tomato sauce.",
+    },
+    {
+        id: 13,
+        title: "Country Delight",
+        price: 20.99,
+        img: "./images/item_13.jpg",
+        desc: "Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut,",
+    },
 ];
+
+const menuList = document.querySelector('.menu-list');
+
+window.addEventListener('DOMContentLoaded', function () {
+
+    // using .map() method insted of for loop
+    let displayMenu = menu.map(function (item) {
+        return `
+        <article class="menu-item">
+            
+            <img src="${item.img}" alt="${item.title}">
+            
+            <div class="item-info">
+                <header>
+                    <h3 class="item-name">${item.title}</h3>
+                    <h3 class="price">$${item.price}</h3>
+                </header>
+                <hr class="item-underline">
+                <p class="item-text">
+                    ${item.desc}
+                </p>
+            </div>
+        </article>
+    `;
+    });
+    
+    displayMenu = displayMenu.join("");
+    
+    console.log(displayMenu);
+
+    menuList.innerHTML = displayMenu;
+});
+
