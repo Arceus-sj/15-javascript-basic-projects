@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Interdisplay=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Interdisplay=swap'); */
 
 * {
     margin: 0;
@@ -107,8 +107,8 @@ section{
     width: 100%;
     max-width: 250px;
     height: 190px;
-    border: 5px solid #4B5D67;
     border-radius: 9px;
+    box-shadow: 0 0 3px #4B5D67;
 }
 
 .item-info {
