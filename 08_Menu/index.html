@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <title>Menu</title>
+    <script src="./app.js" defer></script>
 </head>
 <body>
     <section class="menu">
@@ -16,17 +17,17 @@
 
         <!-- filter buttons -->
         <div class="btn-container">
-            <button class="all">All</button>
-            <button class="breakfast">Breakfast</button>
-            <button class="lunch">Lunch</button>
-            <button class="shakes">Shakes</button>
-            <button class="dinner">Dinner</button>
+            <button class="filter-btn" data-id="all">All</button>
+            <button class="filter-btn" data-id="breakfast">Breakfast</button>
+            <button class="filter-btn" data-id="lunch">Lunch</button>
+            <button class="filter-btn" data-id="shakes">Shakes</button>
+            <button class="filter-btn" data-id="dinner">Dinner</button>
         </div>
 
 
         <div class="menu-list"></div>
 
     </section>
-    <script src="./app.js" defer></script>
+   
 </body>
 </html>
